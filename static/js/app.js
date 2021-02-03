@@ -48,3 +48,17 @@ function loadTableData(ufoSightingsArray) {
         })
     }
 };
+
+// function to complete the event handler function for the filter button
+// filter data based on the search criteria provided by user
+function filterData() {
+
+    // Prevent the page from refreshing
+    d3.event.preventDefault();
+
+    // Get the value property of the input elements
+    var inputDateValue = inputDate.property("value");
+    var inputCountryValue = countryDropDown.property("value");
+    var inputStateValue = stateDropDown.property("value");
+    var inputCityValue = cityDropDown.property("value");
+    var inputShapeValue = shapeDropDown.property("value");
