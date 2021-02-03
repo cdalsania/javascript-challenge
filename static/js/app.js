@@ -85,3 +85,6 @@ function filterData() {
         filteredData = filteredData.filter(ufoSighting => ufoSighting.shape === inputShapeValue);
         console.log("Filtered by Shape");
     }
+
+    // remove all rows from the table body
+    tableBody.html("");
