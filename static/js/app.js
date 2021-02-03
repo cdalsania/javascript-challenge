@@ -128,3 +128,9 @@ var countries = tableData.map(function(ufoSightings) {
 console.log(countries);
 var unique_countries = d3.set(countries).values();
 console.log(unique_countries);
+
+// Load the Country dropdown list
+unique_countries.forEach(country => {
+    var cell = countryDropDown.append("option");
+    cell.property("value", country).text(country);
+});
