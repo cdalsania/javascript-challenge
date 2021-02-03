@@ -120,3 +120,11 @@ unique_shapes.forEach(shape => {
     var cell = shapeDropDown.append("option");
     cell.property("value", shape).text(shape);
 });
+
+// Create a array of unique countries from the table data
+var countries = tableData.map(function(ufoSightings) {
+    return ufoSightings.country;
+});
+console.log(countries);
+var unique_countries = d3.set(countries).values();
+console.log(unique_countries);
