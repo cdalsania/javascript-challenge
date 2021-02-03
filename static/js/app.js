@@ -97,3 +97,9 @@ function filterData() {
 function isValidDate(d) {
     return !isNaN((new Date(d)).getTime());
 }
+
+/***************************************************
+LOAD TABLE DATA - ON PAGE LOAD
+****************************************************/
+// Load table data on page load
+loadTableData(tableData);
