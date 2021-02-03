@@ -62,3 +62,26 @@ function filterData() {
     var inputStateValue = stateDropDown.property("value");
     var inputCityValue = cityDropDown.property("value");
     var inputShapeValue = shapeDropDown.property("value");
+
+    // filter the table data based on the specified filter criteria 
+    var filteredData = tableData;
+    if (inputDateValue != "") {
+        filteredData = filteredData.filter(ufoSighting => ufoSighting.datetime === inputDateValue);
+        console.log("Filtered by Date");
+    }
+    if (inputCityValue != "" && filteredData.length > 0) {
+        filteredData = filteredData.filter(ufoSighting => ufoSighting.city === inputCityValue);
+        console.log("Filtered by City");
+    }
+    if (inputStateValue != "" && filteredData.length > 0) {
+        filteredData = filteredData.filter(ufoSighting => ufoSighting.state === inputStateValue);
+        console.log("Filtered by State");
+    }
+    if (inputCountryValue != "" && filteredData.length > 0) {
+        filteredData = filteredData.filter(ufoSighting => ufoSighting.country === inputCountryValue);
+        console.log("Filtered by Country");
+    }
+    if (inputShapeValue != "" && filteredData.length > 0) {
+        filteredData = filteredData.filter(ufoSighting => ufoSighting.shape === inputShapeValue);
+        console.log("Filtered by Shape");
+    }
