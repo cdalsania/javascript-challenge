@@ -208,3 +208,11 @@ countryDropDown.on("change", function() {
         stateDropDown.attr("disabled", "disabled").style("background", "gray");
     }
 });
+
+// State Event Handler - Disable/Enable & load City dropdown
+stateDropDown.on("change", function() {
+            var selectedCountry = countryDropDown.property("value");
+            var selectedState = this.value;
+            if (selectedState != "") {
+                // Enable City dropdown
+                cityDropDown.attr("disabled", null).style("background", null);
