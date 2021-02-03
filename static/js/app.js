@@ -177,3 +177,18 @@ countryDropDown.on("change", function() {
             if (selectedCountry != "") {
                 // Enable State dropdown
                 stateDropDown.attr("disabled", null).style("background", null);
+
+                /*******************************************
+                Load State dropdown
+                *******************************************/
+
+                // filter table data based on specified country
+                var countryFilteredData = tableData.filter(ufoSighting => ufoSighting.country === selectedCountry);
+
+                // create a array of unique states for the specified country from the table data
+                var states = countryFilteredData.map(function(ufoSightings) {
+                    return ufoSightings.state;
+                });
+                console.log(states);
+                var unique_states = d3.set(states).values();
+                console.log(unique_states);
