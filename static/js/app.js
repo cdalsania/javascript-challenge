@@ -170,3 +170,10 @@ inputDate.on("change", function() {
         dateErrorPTag.text(``);
     }
 });
+
+// Country Event Handler - Disable/Enable & load State dropdown
+countryDropDown.on("change", function() {
+            var selectedCountry = this.value;
+            if (selectedCountry != "") {
+                // Enable State dropdown
+                stateDropDown.attr("disabled", null).style("background", null);
