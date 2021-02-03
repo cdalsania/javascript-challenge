@@ -88,3 +88,7 @@ function filterData() {
 
     // remove all rows from the table body
     tableBody.html("");
+
+    // load the table body with filtered data
+    loadTableData(filteredData);
+};
