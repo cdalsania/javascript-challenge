@@ -18,3 +18,10 @@ var cityDropDown = d3.select("#city-select");
 var inputDate = d3.select("#datetime");
 var inputCity = d3.select("#city");
 var inputState = d3.select("#state");
+
+// Select the buttons
+var button = d3.select("#filter-btn");
+var clearButton = d3.select("#clear-filter-btn");
+
+// Select the form
+var form = d3.select("form");
